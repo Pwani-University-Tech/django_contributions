@@ -1,2 +1,2 @@
 # django_contributions
-This repository is a community-driven hub for Django contributions.Join us in building and enhancing the Django ecosystem—whether you're sharing your own work, improving existing projects, or exploring new ideas, all contributions are welcome.
+This repository is a community-driven hub for Django contributions. It hosts a collection of Django projects, apps, and plugins developed by our members. Join us in building and enhancing the Django ecosystem—whether you're sharing your own work, improving existing projects, or exploring new ideas, all contributions are welcome. For details on how to get involved, check out the CONTRIBUTING.md file.
