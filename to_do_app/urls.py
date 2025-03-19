@@ -1,12 +1,12 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import UserViewSet, TaskViewSet, CategoryViewSet
 
-app_name = 'to_do_app'
+router = DefaultRouter()
+router.register(r'users', UserViewSet)
+router.register(r'tasks', TaskViewSet)
+router.register(r'categories', CategoryViewSet)
 
 urlpatterns = [
-    path('', views.task_list, name='task_list'),
-    path('task/create/', views.task_create, name='task_create'),
-    path('task/<int:pk>/', views.task_detail, name='task_detail'),
-    path('task/<int:pk>/update/', views.task_update, name='task_update'),
-    path('task/<int:pk>/delete/', views.task_delete, name='task_delete'),
+    path('', include(router.urls)),
 ]
