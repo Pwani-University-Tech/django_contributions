@@ -139,6 +139,7 @@ Tasks can be filtered and sorted using query parameters:
 ## Testing
 
 The API can be tested using the provided `api.rest` file or any REST client like Postman. The `api.rest` file includes examples of all available endpoints with proper authentication headers.
+The API also covers coverage you can run by [coverage report command]
 
 ## Contributing
 
