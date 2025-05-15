@@ -192,8 +192,11 @@ class TaskViewSet(viewsets.ModelViewSet):
                 queryset = backend().filter_queryset(self.request, queryset, self)
             return queryset
         except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error("An error occurred while filtering the queryset", exc_info=True)
             raise serializers.ValidationError({
-                'filter': f"Filter error: {str(e)}"
+                'filter': "An error occurred while processing the filters. Please try again later."
             })
 
     @action(detail=False, methods=['get'])
